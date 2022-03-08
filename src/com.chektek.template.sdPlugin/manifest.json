@@ -1,14 +1,50 @@
 {
+	"Actions": [
+		{
+			"Icon": "actions/template/assets/actionimage",
+			"Name": "Example Action #1",
+			"States": [
+				{
+					"Image": "actions/template/assets/action1"
+				}
+			],
+			"Tooltip": "This is an example tooltip",
+			"UUID": "com.elgato.template.action1",
+			"PropertyInspectorPath": "actions/template/inspector/inspector.html"
+		},
+		{
+			"Icon": "actions/template/assets/actionimage",
+			"Name": "Example Action #2",
+			"States": [
+				{
+					"Image": "actions/template/assets/action2"
+				}
+			],
+			"Tooltip": "This is an example tooltip",
+			"UUID": "com.elgato.template.action2",
+			"PropertyInspectorPath": "actions/template/inspector/inspector.html"
+		},
+		{
+			"Icon": "actions/template/assets/actionimage",
+			"Name": "Example Action #3",
+			"States": [
+				{
+					"Image": "actions/template/assets/action3"
+				}
+			],
+			"Tooltip": "This is an example tooltip",
+			"UUID": "com.elgato.template.action3",
+			"PropertyInspectorPath": "actions/template/inspector/inspector.html"
+		}
+	],
 	"SDKVersion": 2,
-	"Author": "ChekTek LLC",
+	"Author": "Elgato Systems",
 	"CodePath": "app.html",
 	"Description": "Example description",
 	"Name": "Stream Deck Template",
 	"Icon": "actions/template/assets/action",
-	"URL": "https://www.chektek.com/",
+	"URL": "https://www.elgato.com/en/gaming/stream-deck",
 	"Version": "1.0.0",
-	"Category":"Template",
-	"CategoryIcon":"actions/template/assets/actionimage",
 	"OS": [
 		{
 			"Platform": "mac",
@@ -20,20 +56,6 @@
 		}
 	],
 	"Software": {
-		"MinimumVersion": "4.1"
-	},
-	"Actions": [
-		{
-			"Icon": "actions/template/assets/actionimage",
-			"Name": "Example Action",
-			"States": [
-				{
-					"Image": "actions/template/assets/action"
-				}
-			],
-			"Tooltip": "This is an example tooltip",
-			"UUID": "com.chektek.template.action",
-			"PropertyInspectorPath": "actions/template/property-inspector/inspector.html"
-		}
-	]
+		"MinimumVersion": "5.0"
+	}
 }
