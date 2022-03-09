@@ -16,8 +16,11 @@ class Context {
     settings    = "";
 
     constructor(data) {
-        const {action, coordinates} = data;
-        
+        this.update(data);
+    }
+
+    update(data){
+        const {action, context, coordinates, settings} = data;
         this.action = action;
         this.coordinates = coordinates;
     }
