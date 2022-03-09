@@ -1,4 +1,27 @@
 {
+	"SDKVersion": 2,
+	"Author": "ChekTek LLC",
+	"CodePath": "app.html",
+	"Description": "Example description",
+	"Name": "Stream Deck Template",
+	"Icon": "actions/template/assets/action",
+	"URL": "https://www.chektek.com/",
+	"Version": "1.0.0",
+	"Category":"Template",
+	"CategoryIcon":"actions/template/assets/actionimage",
+	"OS": [
+		{
+			"Platform": "mac",
+			"MinimumVersion": "10.11"
+		},
+		{
+			"Platform": "windows",
+			"MinimumVersion": "10"
+		}
+	],
+	"Software": {
+		"MinimumVersion": "4.1"
+	},
 	"Actions": [
 		{
 			"Icon": "actions/template/assets/actionimage",
@@ -36,26 +59,5 @@
 			"UUID": "com.elgato.template.action3",
 			"PropertyInspectorPath": "actions/template/inspector/inspector.html"
 		}
-	],
-	"SDKVersion": 2,
-	"Author": "Elgato Systems",
-	"CodePath": "app.html",
-	"Description": "Example description",
-	"Name": "Stream Deck Template",
-	"Icon": "actions/template/assets/action",
-	"URL": "https://www.elgato.com/en/gaming/stream-deck",
-	"Version": "1.0.0",
-	"OS": [
-		{
-			"Platform": "mac",
-			"MinimumVersion": "10.11"
-		},
-		{
-			"Platform": "windows",
-			"MinimumVersion": "10"
-		}
-	],
-	"Software": {
-		"MinimumVersion": "5.0"
-	}
+	]
 }

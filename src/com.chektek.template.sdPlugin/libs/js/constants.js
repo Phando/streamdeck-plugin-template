@@ -25,6 +25,7 @@ const DID_RECEIVE_SETTINGS = 'didReceiveSettings';
 const DID_RECEIVE_GLOBAL_SETTINGS = 'didReceiveGlobalSettings';
 const KEY_DOWN = 'keyDown';
 const KEY_UP = 'keyUp';
+const LONG_PRESS = 'longPress';
 const WILL_APPEAR = 'willAppear';
 const WILL_DISAPPEAR = 'willDisappear';
 const TITLE_PARAMETERS_DID_CHANGE = 'titleParametersDidChange';
@@ -59,3 +60,8 @@ const LOG_MESSAGE = 'logMessage';
 const HARDWARE_AND_SOFTWARE = 0;
 const HARDWARE_ONLY = 1;
 const SOFTWARE_ONLY = 2;
+
+/**
+ * Plugin State
+ */
+const STATE_DEFAULT = "stateDefault";

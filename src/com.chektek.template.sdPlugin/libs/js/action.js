@@ -7,6 +7,7 @@
 class Action {
 	UUID;
 	#on = EventEmitter.on;
+	isLongPress = false;
 
 	constructor(UUID) {
 		this.UUID = UUID;
@@ -35,6 +36,8 @@ class Action {
 	 * @param {*} fn
 	 */
 	onKeyDown(fn) {
+		console.log("PRESS");
+		console.log(this.UUID);
 		this.#on(`${this.UUID}.${KEY_DOWN}`, (jsn) => fn(jsn));
 		return this;
 	}
@@ -45,6 +48,16 @@ class Action {
 	 */
 	onKeyUp(fn) {
 		this.#on(`${this.UUID}.${KEY_UP}`, (jsn) => fn(jsn));
+		this.isLongPress = false;
+		return this;
+	}
+
+	/**
+	 * Registers a callback function for the longPress event, which fires when a key is held down for 2 seconds
+	 * @param {*} fn
+	 */
+	 onLongPress(fn) {
+		this.#on(`${this.UUID}.${LONG_PRESS}`, (jsn) => fn(jsn));
 		return this;
 	}
 

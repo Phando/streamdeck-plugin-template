@@ -8,7 +8,7 @@ StreamDeck.onConnected(({ actionInfo, appInfo, connection, messageType, port, uu
 	// TODO: Remove this test logging code and replace with simple action example
 	console.log({ object: 'stream-deck', event: 'onConnected' });
 
-	new Action('com.chektek.template.action')
+	new Action('com.elgato.template.action1')
 		.onDidReceiveGlobalSettings(() => {
 			console.log({ object: 'action', event: 'onDidReceiveGlobalSettings' });
 		})
@@ -20,6 +20,9 @@ StreamDeck.onConnected(({ actionInfo, appInfo, connection, messageType, port, uu
 		})
 		.onKeyUp(() => {
 			console.log({ object: 'action', event: 'onKeyUp' });
+		})
+		.onLongPress(() => {
+			console.log({ object: 'action', event: 'longPress' });
 		})
 		.onWillAppear(() => {
 			console.log({ object: 'action', event: 'onWillAppear' });
@@ -44,8 +47,8 @@ StreamDeck.onConnected(({ actionInfo, appInfo, connection, messageType, port, uu
 		});
 
 	StreamDeck.onDeviceDidConnect(() => {
-		console.log({ object: 'stream-deck', event: 'onDeviceDidConnect' });
-	})
+			console.log({ object: 'stream-deck', event: 'onDeviceDidConnect' });
+		})
 		.onDeviceDidDisconnect(() => {
 			console.log({ object: 'stream-deck', event: 'onDeviceDidDisconnect' });
 		})

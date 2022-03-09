@@ -1,5 +1,6 @@
 /// <reference path="event-emitter.js" />
 /// <reference path="constants.js" />
+/// <reference path="context.js" />
 
 /**
  * @class StreamDeck
@@ -17,6 +18,7 @@ class StreamDeck {
 	static #appInfo;
 	static #on = EventEmitter.on;
 	static #emit = EventEmitter.emit;
+	static #actionList = [];
 
 	/**
 	 * Connect to Stream Deck
@@ -74,6 +76,14 @@ class StreamDeck {
 			const data = evt?.data ? JSON.parse(evt.data) : {};
 			const {action, event} = data;
 			const message = action ? `${action}.${event}` : event;
+			
+			if(!(action in this.#actionList)){
+				this.#actionList[action] = new Context(data);
+			} 
+			else {
+				var context = (Context)this.#actionList[action];
+				context.update(data);
+			}
 
 			if (message && message !== '') this.#emit(message, data);
 		};
